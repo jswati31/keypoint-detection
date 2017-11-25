@@ -89,12 +89,12 @@ if __name__ == "__main__":
 
 	# setting the hyper parameters
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--batch_size', default=1, type=int)
-	parser.add_argument('--epochs', default=400, type=int)
-	parser.add_argument('--is_training', default=1, type=int)
-	parser.add_argument('--data_path', default='data/')
-	parser.add_argument('--save_weights', default=1, type=int)
-	parser.add_argument('--plot', default=1, type=int)
+	parser.add_argument('--batch_size', default=1, type=int, help='Batch size')
+	parser.add_argument('--epochs', default=400, type=int, help='Number of epochs')
+	parser.add_argument('--is_training', default=1, type=int, help='Training(1) or testing(0)')
+	parser.add_argument('--data_path', default='data/',help='Path to data folder')
+	parser.add_argument('--save_weights', default=1, type=int, help='Save weights (Yes=1, No=0)')
+	parser.add_argument('--plot', default=1, type=int, help='Plot accuracy or loss curves (Yes=1, No=0)')
 	args = parser.parse_args()
 	
 	#load data
